@@ -16,17 +16,22 @@
       --ink: #f0ede6; --white: #181c27; --line: #2a2e3d; --muted: #a8a4b0;
     }
     html, body { width:100%; height:100%; overflow:hidden; font-family:"Pretendard",sans-serif; background:var(--cream); color:var(--ink); }
-    .header { height:56px; background:var(--white); border-bottom:1px solid var(--line); display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; padding:0 16px; }
-    .logo-btn { border:none; background:transparent; cursor:pointer; display:inline-flex; align-items:center; }
-    .logo-btn img { height:44px; width:auto; object-fit:contain; display:block; mix-blend-mode: multiply; clip-path: inset(2px); }
-    .top-nav { display:flex; justify-content:center; gap:6px; }
-    .nav-btn { border:none; background:transparent; color:var(--muted); border-radius:8px; height:34px; padding:0 14px; font-size:13px; font-weight:600; cursor:pointer; transition:180ms ease; }
-    .nav-btn:hover, .nav-btn.active { background:var(--accent); color:#fff; }
+    .header { height:64px; background:var(--white); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; padding:0 24px; }
+    .header-left { display:flex; align-items:center; gap:32px; height:100%; }
+    .logo-btn { border:none; background:transparent; cursor:pointer; display:inline-flex; align-items:center; height:100%; }
+    .logo-btn img { height:36px; width:auto; object-fit:contain; display:block; filter:invert(1); }
+    .top-nav { display:flex; gap:16px; height:100%; align-items:center; }
+    .nav-btn { border:none; background:transparent; color:var(--muted); height:100%; padding:0 4px; font-size:15px; font-weight:600; cursor:pointer; position:relative; }
+    .nav-btn:hover { color:var(--ink); }
+    .nav-btn.active { color:var(--ink); font-weight:700; }
+    .nav-btn.active::after { content:""; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--ink); border-radius:3px 3px 0 0; }
     body.dark .nav-btn { color:var(--ink); }
-    .header-right { margin-left:auto; display:flex; gap:8px; align-items:center; }
-    .btn-line, .btn-fill { border-radius:9px; font-size:12px; font-weight:600; height:34px; padding:0 12px; cursor:pointer; }
-    .btn-line { border:1px solid var(--line); background:var(--white); color:var(--ink); }
-    .btn-fill { border:1px solid var(--accent); background:var(--accent); color:#fff; }
+    .header-right { display:flex; gap:10px; align-items:center; }
+    .btn-line, .btn-fill { border-radius:9px; font-size:13px; font-weight:600; height:38px; padding:0 16px; cursor:pointer; }
+    .btn-line { border:1px solid var(--line); background:var(--white); color:var(--ink); transition:all 0.2s; }
+    .btn-line:hover { background:var(--accent-light); }
+    .btn-fill { border:1px solid var(--accent); background:var(--accent); color:#fff; transition:all 0.2s; }
+    .btn-fill:hover { opacity:0.9; transform:translateY(-1px); }
     .app { position:relative; width:100%; height:calc(100vh - 56px); overflow:hidden; background:var(--cream); }
     .state { position:absolute; inset:0; opacity:0; pointer-events:none; transform:translateY(4px); transition:opacity 220ms ease,transform 220ms ease; }
     .state.active { opacity:1; pointer-events:auto; transform:translateY(0); }
@@ -38,7 +43,7 @@
     /* Spline: Robot */
     .spline-hero { position:absolute; top:0; left:0; width:100%; height:100%; z-index:2; pointer-events:auto; }
     .spline-hero iframe { width:100%; height:100%; border:none; }
-    .spline-watermark-hide { position:absolute; bottom:0; right:0; width:160px; height:50px; background:var(--cream); z-index:10; pointer-events:none; }
+    .spline-watermark-hide { position:absolute; bottom:0; right:0; width:180px; height:60px; background:var(--cream); z-index:10; pointer-events:none; }
     .hero-fade { background:linear-gradient(to bottom, transparent, var(--cream)); height:40px; margin-top:-40px; position:relative; z-index:5; pointer-events:none; }
     .hero-bottom { background:var(--cream); padding:18px 22px 20px; overflow:auto; display:flex; flex-direction:column; align-items:center; gap:14px; }
     .hero-copy { width:min(80%,920px); }
@@ -116,12 +121,14 @@
 </head>
 <body>
   <header class="header">
-    <button class="logo-btn" id="goHomeBtn" title="홈">
-      <img src="gnova_hypercar_logo_2.png" alt="G-NOVA">
-    </button>
-    <nav class="top-nav" id="topNav"></nav>
+    <div class="header-left">
+      <button class="logo-btn" id="goHomeBtn" title="홈">
+        <img src="gnova_hypercar_logo_2.png" alt="G-NOVA">
+      </button>
+      <nav class="top-nav" id="topNav"></nav>
+    </div>
     <div class="header-right">
-      <button class="btn-line" id="goSalesBtn">템플릿 판매 페이지</button>
+      <button class="btn-line" id="goSalesBtn">템플릿 판매</button>
       <button class="btn-line" id="darkBtn">다크모드</button>
       <button class="btn-fill" id="signInBtn">로그인</button>
     </div>
