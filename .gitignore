@@ -1,0 +1,36 @@
+﻿# 대용량 파일 및 불필요 파일 제외
+*.mp4
+*.pdf
+*.xlsx
+*.csv
+*.reg
+*.vbs
+*.bat
+*.ps1
+check_*.jpg
+clean_*.jpg
+final_*.jpg
+frame*.jpg
+lid_*.jpg
+orig_*.jpg
+qc*.jpg
+r3*.jpg
+result*.jpg
+scan_*.jpg
+v2_*.jpg
+v3_*.jpg
+v4_*.jpg
+veo_*.jpg
+icon_*.jpg
+test_copy.*
+# 개인 문서
+SESSION_*.md
+session_*.md
+ANTIGRAVITY_*.md
+SALES_*.md
+future_skills*.md
+pdf_content.txt
+xlsx_content.txt
+# 임시 파일
+*.vbs
+mp4_*
