@@ -16,8 +16,8 @@ class NavigationTests(unittest.TestCase):
         )
 
     def test_no_missing_local_html_targets(self):
-        targets = set(re.findall(r'(?:href|src)=["\\']([^"\\']+\\.html)["\\']', HTML))
-        targets.update(re.findall(r'window\\.location\\.href=["\\']([^"\\']+\\.html)["\\']', HTML))
+        targets = set(re.findall(r"(?:href|src)=[\"']([^\"']+\.html)[\"']", HTML))
+        targets.update(re.findall(r"window\.location\.href=[\"']([^\"']+\.html)[\"']", HTML))
 
         missing = sorted(target for target in targets if not (ROOT / target).exists())
 
