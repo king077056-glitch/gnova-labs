@@ -1,5 +1,6 @@
 from pathlib import Path
 import re
+import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,12 +19,17 @@ def _local_targets(html: str):
         yield target.split("#", 1)[0]
 
 
-def test_local_html_references_exist():
-    missing = []
-    for html_file in ROOT.glob("*.html"):
-        html = html_file.read_text(encoding="utf-8")
-        for target in _local_targets(html):
-            if not (html_file.parent / target).exists():
-                missing.append(f"{html_file.name} -> {target}")
+class StaticSiteLinkTests(unittest.TestCase):
+    def test_local_html_references_exist(self):
+        missing = []
+        for html_file in ROOT.glob("*.html"):
+            html = html_file.read_text(encoding="utf-8")
+            for target in _local_targets(html):
+                if not (html_file.parent / target).exists():
+                    missing.append(f"{html_file.name} -> {target}")
 
-    assert missing == []
+        self.assertEqual([], missing)
+
+
+if __name__ == "__main__":
+    unittest.main()
