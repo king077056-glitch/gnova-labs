@@ -34,3 +34,4 @@ xlsx_content.txt
 # 임시 파일
 *.vbs
 mp4_*
+__pycache__/
