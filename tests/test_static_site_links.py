@@ -27,3 +27,7 @@ def test_local_html_references_exist():
                 missing.append(f"{html_file.name} -> {target}")
 
     assert missing == []
+
+
+if __name__ == "__main__":
+    test_local_html_references_exist()
