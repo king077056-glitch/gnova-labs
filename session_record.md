@@ -1,7 +1,23 @@
 ﻿# Gnova Labs Session Record
 
-> Last updated: Cursor (2026-05-26)
+> Last updated: Cursor (2026-05-27)
 > Workspace: `C:\Users\king0\노바깨비법인`
+
+---
+
+## 2026-05-27
+
+### Summary
+- Investigated recent static-site navigation changes for critical correctness regressions.
+- Restored `gnova_sales_suite.html`, the missing target for the main console "템플릿 판매" button.
+- Added `tests/test_static_site_links.py` to catch missing local `href`, `src`, and `window.location.href` targets.
+
+### Safe Push Notes
+- Pushed safe site and test changes to `origin/cursor/critical-bug-investigation-4890`.
+- Validation: `python3 tests/test_static_site_links.py`.
+
+### Local-Only Notes
+- No local-only files were intentionally created or changed.
 
 ---
 
