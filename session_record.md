@@ -19,3 +19,21 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-05-28
+
+### Summary
+- Investigated recent static-site changes for critical correctness bugs.
+- Restored the missing `gnova_sales_suite.html` target for the main header "템플릿 판매" navigation.
+- Added `tests/test_static_site_links.py` to catch missing local HTML, image, and redirect references.
+
+### Validation
+- Ran `python3 tests/test_static_site_links.py` successfully.
+
+### Safe Push Notes
+- Pushed only safe site code, tests, and this session record to `cursor/critical-bug-investigation-1403`.
+
+### Local-Only Notes
+- No local-only artifacts were intentionally created or retained.
