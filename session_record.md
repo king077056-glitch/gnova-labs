@@ -1,6 +1,6 @@
 ﻿# Gnova Labs Session Record
 
-> Last updated: Cursor (2026-05-26)
+> Last updated: Cursor (2026-05-29)
 > Workspace: `C:\Users\king0\노바깨비법인`
 
 ---
@@ -19,3 +19,18 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-05-29
+
+### Summary
+- Investigated recent static-site commits for critical user-facing breakage.
+- Fixed the top-level `템플릿 판매` navigation 404 by adding `gnova_sales_suite.html`.
+- Added `tests/test_static_site_links.py` to validate local HTML, asset, and JavaScript navigation targets.
+
+### Safe Push Notes
+- Safe code/documentation files only; no secrets, logs, inbox dumps, or runtime state included.
+
+### Local-Only Notes
+- No local-only files were intentionally changed or staged.
