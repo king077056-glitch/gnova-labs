@@ -19,3 +19,18 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-05-31
+
+### Summary
+- Investigated recent static-site commits for high-severity correctness bugs.
+- Fixed the header sales navigation 404 by adding `gnova_sales_suite.html`.
+- Added `tests/test_static_site_links.py` to catch missing local static references.
+
+### Safe Push Notes
+- Only static site code, test code, and this session record were changed.
+
+### Local-Only Notes
+- No local-only files were staged or pushed.
