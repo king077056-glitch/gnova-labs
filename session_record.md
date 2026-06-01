@@ -1,7 +1,26 @@
 ﻿# Gnova Labs Session Record
 
-> Last updated: Cursor (2026-05-26)
+> Last updated: Cursor (2026-06-01)
 > Workspace: `C:\Users\king0\노바깨비법인`
+
+---
+
+## 2026-06-01
+
+### Summary
+- Investigated recent branch state for critical correctness regressions.
+- Fixed a production 404 path where the main page sales CTA navigated to missing `gnova_sales_suite.html`.
+- Added `tests/test_static_site_links.py` to validate local HTML asset links and JavaScript `location.href` targets.
+
+### Validation
+- Ran `python3 tests/test_static_site_links.py`.
+
+### Safe Push Notes
+- Safe code/docs changes committed and pushed to `cursor/critical-bug-investigation-de7e`.
+- No secrets, logs, inbox dumps, runtime state, or raw local artifacts were staged.
+
+### Local-Only Notes
+- No new local-only items.
 
 ---
 
