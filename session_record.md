@@ -19,3 +19,15 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+## 2026-06-02
+
+### Summary
+- Fixed the header `템플릿 판매` CTA so it routes to the existing in-page `무료 프롬프트` category instead of the missing `gnova_sales_suite.html` page.
+- Added `tests/test_static_site_links.py` to catch future local `.html` navigation targets that point at absent files.
+
+### Validation
+- Ran `python3 tests/test_static_site_links.py` successfully.
+
+### Local-Only Notes
+- No local-only operational artifacts were staged for this change.
