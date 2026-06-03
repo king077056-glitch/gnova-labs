@@ -29,7 +29,9 @@
 
 ### Validation
 - Verified before the fix that `gnova_metal_console.html` referenced `gnova_sales_suite.html` while the target file did not exist.
-- Planned validation: run `python3 tests/test_static_site_links.py` and perform a browser walkthrough of the CTA.
+- Ran `python3 tests/test_static_site_links.py` successfully.
+- Confirmed both `gnova_metal_console.html` and `gnova_sales_suite.html` return HTTP 200 from the local static server.
+- Completed a browser walkthrough: clicking the homepage `템플릿 판매` CTA landed on `gnova_sales_suite.html` and rendered the Template Sales Suite content instead of a 404.
 
 ### Local-Only Notes
 - No local-only operational artifacts were staged for this change.
