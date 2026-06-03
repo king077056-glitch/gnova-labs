@@ -1,6 +1,6 @@
 ﻿# Gnova Labs Session Record
 
-> Last updated: Cursor (2026-05-26)
+> Last updated: Cursor (2026-06-03)
 > Workspace: `C:\Users\king0\노바깨비법인`
 
 ---
@@ -19,3 +19,19 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+## 2026-06-03
+
+### Summary
+- Investigated recent static-site changes for critical correctness regressions.
+- Restored the missing `gnova_sales_suite.html` page targeted by the homepage `템플릿 판매` CTA.
+- Added `tests/test_static_site_links.py` to fail on missing local static references, including JavaScript `window.location.href` redirects.
+
+### Validation
+- Verified before the fix that `gnova_metal_console.html` referenced `gnova_sales_suite.html` while the target file did not exist.
+- Ran `python3 tests/test_static_site_links.py` successfully.
+- Confirmed both `gnova_metal_console.html` and `gnova_sales_suite.html` return HTTP 200 from the local static server.
+- Completed a browser walkthrough: clicking the homepage `템플릿 판매` CTA landed on `gnova_sales_suite.html` and rendered the Template Sales Suite content instead of a 404.
+
+### Local-Only Notes
+- No local-only operational artifacts were staged for this change.
