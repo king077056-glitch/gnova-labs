@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-NOVA LABS | Template Sales Suite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--cream:#EDEBE3;--ink:#1A1A18;--purple:#7C3AED;--muted:#6B6B63;--border:rgba(26,26,24,.1);--surface:rgba(237,235,227,.9)}
+    body{min-height:100vh;font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink)}
+    .header{height:64px;background:var(--surface);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:0 40px}
+    .logo{border:none;background:transparent;cursor:pointer;padding:0}
+    .logo img{height:44px;width:auto;display:block}
+    .home-link{border:1px solid var(--border);background:transparent;color:var(--ink);border-radius:999px;font-size:14px;font-weight:700;height:38px;padding:0 18px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+    .hero{max-width:1120px;margin:0 auto;padding:76px 32px 44px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:48px;align-items:center}
+    .eyebrow{display:inline-flex;color:var(--purple);background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
+    h1{font-family:"Playfair Display",serif;font-size:56px;line-height:1.06;letter-spacing:-.03em;margin-bottom:22px}
+    .lead{font-size:18px;line-height:1.8;color:var(--muted);max-width:620px}
+    .panel{background:rgba(255,255,255,.45);border:1px solid var(--border);border-radius:28px;padding:32px;box-shadow:0 18px 50px rgba(26,26,24,.08)}
+    .panel h2{font-family:"Playfair Display",serif;font-size:26px;margin-bottom:18px}
+    .panel p{color:var(--muted);line-height:1.7;margin-bottom:20px}
+    .cta{height:52px;border:none;border-radius:14px;background:var(--purple);color:#fff;font-size:16px;font-weight:800;padding:0 26px;cursor:pointer}
+    .grid{max-width:1120px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.38);border:1px solid var(--border);border-radius:22px;padding:26px}
+    .tag{font-size:11px;font-weight:900;color:var(--purple);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+    .card h3{font-size:20px;margin-bottom:12px}
+    .card p{font-size:15px;color:var(--muted);line-height:1.7}
+    @media (max-width:800px){.header{padding:0 20px}.hero{grid-template-columns:1fr;padding-top:48px}h1{font-size:42px}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <button class="logo" onclick="window.location.href='gnova_metal_console.html'" title="홈">
+      <img src="gnova_hypercar_logo_transparent.png" alt="G-NOVA">
+    </button>
+    <a class="home-link" href="gnova_metal_console.html">메인으로</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Template Sales Suite</div>
+        <h1>판매 가능한 AI 템플릿을 한 곳에서 소개합니다.</h1>
+        <p class="lead">브랜드 이미지, 제품 컷, 숏폼 영상, 블로그 자동화에 바로 적용할 수 있는 G-NOVA 템플릿 패키지를 준비했습니다.</p>
+      </div>
+      <aside class="panel">
+        <h2>상담 후 맞춤 제공</h2>
+        <p>업종, 채널, 제작 목표에 맞춰 템플릿 묶음과 실행 가이드를 함께 정리해드립니다.</p>
+        <button class="cta" onclick="window.location.href='gnova_metal_console.html'">서비스 상담 시작</button>
+      </aside>
+    </section>
+    <section class="grid" aria-label="템플릿 판매 항목">
+      <article class="card">
+        <div class="tag">Image</div>
+        <h3>브랜드 이미지 템플릿</h3>
+        <p>일관된 브랜드 톤으로 홍보 이미지와 상세페이지 컷을 빠르게 생성하는 프롬프트 세트입니다.</p>
+      </article>
+      <article class="card">
+        <div class="tag">Video</div>
+        <h3>숏폼 영상 템플릿</h3>
+        <p>15~30초 홍보 영상 구성, 컷 전환, 자막 방향을 포함한 제작 템플릿입니다.</p>
+      </article>
+      <article class="card">
+        <div class="tag">Content</div>
+        <h3>블로그 자동화 템플릿</h3>
+        <p>키워드 구조, 본문 흐름, CTA 배치까지 포함한 콘텐츠 운영용 템플릿입니다.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
