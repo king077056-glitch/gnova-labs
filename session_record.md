@@ -19,3 +19,18 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-06-04
+
+### Summary
+- Investigated recent static-site commits for high-severity regressions.
+- Restored the missing `gnova_sales_suite.html` page targeted by the main header's template-sales button.
+- Added `tests/test_static_site_links.py` to catch missing local HTML, script, image, and JavaScript navigation targets.
+
+### Safe Push Notes
+- Only static site code, regression test, and this session record were changed.
+
+### Local-Only Notes
+- No local-only artifacts were staged.
