@@ -19,3 +19,22 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-06-07
+
+### Summary
+- Investigated recent static-site UI commits for high-severity correctness regressions.
+- Fixed the header template/sales button so it no longer navigates to missing `gnova_sales_suite.html`; it now opens the existing in-page prompt/template category.
+- Added `tests/test_static_site_links.py` to catch shipped HTML references and script navigations to missing local files.
+
+### Validation
+- Ran `python3 tests/test_static_site_links.py`.
+- Served the app locally and recorded a browser walkthrough confirming the header button stays on the shipped page and renders the prompt category instead of a 404.
+
+### Safe Push Notes
+- Code, regression test, and this session record are safe to commit and push.
+
+### Local-Only Notes
+- No local-only artifacts intentionally left in the repo.
