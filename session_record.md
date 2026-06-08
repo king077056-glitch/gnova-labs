@@ -19,3 +19,16 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+## 2026-06-08
+
+### Summary
+- Investigated recent commits for high-severity correctness issues.
+- Fixed the header prompt CTA in `gnova_metal_console.html` so it renders an existing in-app category instead of navigating to missing `gnova_sales_suite.html`.
+- Validation used a local static server and browser walkthrough.
+
+### Safe Push Notes
+- Only safe app/docs files were changed.
+
+### Local-Only Notes
+- Local static server/process state and test artifacts are not part of the repo.
