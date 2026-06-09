@@ -19,3 +19,19 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-06-09
+
+### Summary
+- Investigated recent static-site commits for high-severity regressions.
+- Fixed the top-level `템플릿 판매` CTA 404 by adding `gnova_sales_suite.html`.
+- Added `tests/test_static_site_links.py` to catch missing local HTML/asset targets.
+
+### Safe Push Notes
+- Changes are limited to static HTML, a lightweight Python validation script, and this session record.
+- No secrets, logs, runtime state, or local-only artifacts were staged.
+
+### Validation Notes
+- Run `python3 tests/test_static_site_links.py`.
