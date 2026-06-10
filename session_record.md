@@ -30,6 +30,8 @@
 ### Validation
 - `python3 tests/test_static_site_links.py`
 - Simulated pre-fix checkout without `gnova_sales_suite.html`; the new test failed on the missing sales target as expected.
+- Local HTTP smoke checks returned 200 for the main console, restored sales page, and logo asset.
+- Browser walkthrough clicked `템플릿 판매` and landed on the restored template sales suite page.
 
 ### Safe Push Notes
 - Only safe static-site code, test, and this session record are intended for commit/push.
