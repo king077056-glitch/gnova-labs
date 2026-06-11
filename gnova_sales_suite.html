@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-NOVA LABS | 템플릿 판매</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --cream: #EDEBE3;
+      --ink: #1A1A18;
+      --purple: #7C3AED;
+      --muted: #6B6B63;
+      --border: rgba(26, 26, 24, 0.12);
+      --surface: rgba(255, 255, 255, 0.58);
+    }
+    html, body {
+      min-height: 100%;
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 78% 12%, rgba(124, 58, 237, 0.14), transparent 34%),
+        radial-gradient(circle at 18% 80%, rgba(124, 58, 237, 0.10), transparent 30%),
+        var(--cream);
+      color: var(--ink);
+    }
+    body { overflow-x: hidden; }
+    .header {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 44px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(237, 235, 227, 0.86);
+      backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+    .logo img { height: 42px; width: auto; display: block; }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .btn {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 0 18px;
+      color: var(--ink);
+      background: transparent;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn.primary {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 88px 32px 54px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
+      gap: 48px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      color: var(--purple);
+      background: rgba(124, 58, 237, 0.08);
+      border: 1px solid rgba(124, 58, 237, 0.22);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      margin-bottom: 28px;
+    }
+    h1 em { color: var(--purple); font-style: italic; }
+    .lead {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: 0 22px 70px rgba(26, 26, 24, 0.08);
+      backdrop-filter: blur(24px);
+    }
+    .panel h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+    .checklist { list-style: none; display: grid; gap: 14px; }
+    .checklist li {
+      color: var(--ink);
+      line-height: 1.55;
+      padding-left: 28px;
+      position: relative;
+      font-weight: 600;
+    }
+    .checklist li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--purple);
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.12);
+    }
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 32px 82px;
+    }
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+    .section-title h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -0.03em;
+    }
+    .section-title p {
+      max-width: 420px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.42);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 12px 42px rgba(26, 26, 24, 0.05);
+    }
+    .kicker {
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .card p { color: var(--muted); line-height: 1.68; }
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-weight: 800;
+    }
+    .price strong {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 34px;
+    }
+    .note {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+    @media (max-width: 880px) {
+      .header { padding: 0 20px; }
+      .logo span { display: none; }
+      .hero { grid-template-columns: 1fr; padding-top: 56px; }
+      .cards { grid-template-columns: 1fr; }
+      .section-title { display: block; }
+      .section-title p { margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="gnova_metal_console.html" aria-label="G-NOVA 홈으로 이동">
+      <img src="gnova_hypercar_logo_transparent.png" alt="G-NOVA">
+      <span>G-NOVA LABS</span>
+    </a>
+    <nav class="nav-actions" aria-label="상단 메뉴">
+      <a class="btn" href="gnova_metal_console.html">서비스 안내</a>
+      <a class="btn primary" href="mailto:contact@gnovalabs.com?subject=G-NOVA%20템플릿%20문의">구매 문의</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Template Sales Suite</div>
+        <h1>바로 실행하는<br><em>AI 비즈니스 템플릿</em></h1>
+        <p class="lead">
+          반복되는 제안서, 랜딩 구성, 프롬프트 설계를 빠르게 시작할 수 있도록
+          G-NOVA 운영 노하우를 템플릿 패키지로 정리했습니다.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:contact@gnovalabs.com?subject=G-NOVA%20템플릿%20구매%20문의">구매 상담하기</a>
+          <a class="btn" href="#packages">패키지 보기</a>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="템플릿 구성">
+        <h2>포함 항목</h2>
+        <ul class="checklist">
+          <li>업종별 AI 서비스 제안서 구조</li>
+          <li>상담 전환형 랜딩 페이지 카피 블록</li>
+          <li>이미지와 영상 생성을 위한 프롬프트 세트</li>
+          <li>운영 체크리스트와 납품 전 검수 기준</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="section-title">
+        <h2>판매 패키지</h2>
+        <p>초기 도입부터 반복 운영까지 필요한 범위에 맞춰 선택할 수 있는 구성입니다.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div>
+            <div class="kicker">Starter</div>
+            <h3>프롬프트 스타터</h3>
+            <p>이미지, 숏폼, 블로그 초안 제작에 바로 적용하는 기본 프롬프트 묶음입니다.</p>
+          </div>
+          <div class="price"><strong>49,000</strong><span>KRW</span></div>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="kicker">Business</div>
+            <h3>랜딩 세일즈 키트</h3>
+            <p>상담 유입을 목표로 한 랜딩 섹션, CTA 문구, 문의 흐름 템플릿입니다.</p>
+          </div>
+          <div class="price"><strong>149,000</strong><span>KRW</span></div>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="kicker">Pro</div>
+            <h3>운영 자동화 팩</h3>
+            <p>제안서, 콘텐츠 일정, 납품 체크리스트를 포함한 운영자용 통합 패키지입니다.</p>
+          </div>
+          <div class="price"><strong>299,000</strong><span>KRW</span></div>
+        </article>
+      </div>
+      <p class="note">
+        결제와 납품 방식은 상담 후 확정됩니다. 기업 맞춤형 템플릿 제작은 별도 견적으로 진행합니다.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
