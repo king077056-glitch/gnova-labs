@@ -19,3 +19,19 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-06-12
+
+### Summary
+- Investigated recent static-site commits for critical correctness regressions.
+- Found that the production header action `템플릿 판매` navigated to missing local page `gnova_sales_suite.html`, producing a user-facing 404.
+- Added `gnova_sales_suite.html` as the sales suite landing page target.
+- Added `tests/test_static_site_links.py` to validate local `href`, `src`, and `window.location.href` references.
+
+### Validation
+- Ran `python3 tests/test_static_site_links.py` successfully.
+
+### Safe Push Notes
+- Only static HTML, test code, and this session record were changed.
