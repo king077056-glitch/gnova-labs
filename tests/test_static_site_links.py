@@ -60,3 +60,7 @@ def test_local_static_references_exist():
                 )
 
     assert missing == []
+
+
+if __name__ == "__main__":
+    test_local_static_references_exist()
