@@ -19,3 +19,21 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-06-14
+
+### Summary
+- Investigated recent static-site commits for high-impact correctness regressions.
+- Found the header sales button navigated to missing `gnova_sales_suite.html`, causing a production 404 for users clicking `템플릿 판매`.
+- Added `gnova_sales_suite.html` and a direct-runnable static link regression check at `tests/test_static_site_links.py`.
+
+### Validation
+- Ran `python3 tests/test_static_site_links.py` successfully.
+
+### Safe Push Notes
+- Pushed only site HTML, test code, and this session record to `cursor/critical-bug-investigation-e1c0`.
+
+### Local-Only Notes
+- No local-only artifacts were intentionally left behind.
