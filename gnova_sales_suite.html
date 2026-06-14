@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-NOVA LABS | 템플릿 판매</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #edebe3;
+      --ink: #1a1a18;
+      --muted: #68685f;
+      --purple: #7c3aed;
+      --line: rgba(26, 26, 24, 0.12);
+      --card: rgba(255, 255, 255, 0.48);
+    }
+    body {
+      min-height: 100vh;
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(124, 58, 237, 0.16), transparent 34rem),
+        var(--cream);
+      color: var(--ink);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px clamp(20px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(237, 235, 227, 0.82);
+      backdrop-filter: blur(18px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .brand img { width: 48px; height: auto; display: block; }
+    .back-link {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 18px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .back-link:hover { background: rgba(26, 26, 24, 0.08); transform: translateY(-1px); }
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 88px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 44px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      color: var(--purple);
+      border: 1px solid rgba(124, 58, 237, 0.22);
+      border-radius: 999px;
+      background: rgba(124, 58, 237, 0.08);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      padding: 7px 14px;
+      margin-bottom: 22px;
+    }
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+      max-width: 620px;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 24px 70px rgba(26, 26, 24, 0.08);
+      padding: 30px;
+    }
+    .panel h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .panel ul { list-style: none; display: grid; gap: 14px; }
+    .panel li {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.6;
+      padding-top: 14px;
+    }
+    .panel strong { color: var(--ink); display: block; margin-bottom: 4px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      min-height: 220px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.42);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card span {
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      margin: 16px 0 10px;
+    }
+    .card p { color: var(--muted); line-height: 1.65; }
+    .badge {
+      width: fit-content;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: 22px;
+      padding: 8px 13px;
+    }
+    @media (max-width: 840px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      header { align-items: flex-start; gap: 16px; flex-direction: column; }
+      main { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="gnova_metal_console.html">
+      <img src="gnova_hypercar_logo_transparent.png" alt="G-NOVA">
+      <span>G-NOVA LABS</span>
+    </a>
+    <a class="back-link" href="gnova_metal_console.html">메인으로 돌아가기</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">SALES TEMPLATE SUITE</div>
+        <h1>바로 판매에 쓰는 AI 템플릿</h1>
+        <p class="lead">G-NOVA의 상담, 제안, 콘텐츠 제작 흐름을 빠르게 시작할 수 있도록 실전형 템플릿 묶음을 제공합니다.</p>
+      </div>
+      <aside class="panel" aria-label="템플릿 구성">
+        <h2>구성 안내</h2>
+        <ul>
+          <li><strong>상담 전환 스크립트</strong>문의 응대와 제안 흐름을 정리한 기본 세트</li>
+          <li><strong>콘텐츠 운영 프롬프트</strong>블로그, 이미지, 숏폼 제작용 반복 템플릿</li>
+          <li><strong>랜딩 구성 체크리스트</strong>신뢰 요소와 전환 버튼을 점검하는 페이지 구조</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid" aria-label="판매 템플릿">
+      <article class="card">
+        <div>
+          <span>Starter</span>
+          <h3>프롬프트 스타터</h3>
+          <p>브랜드 소개, 상품 설명, 블로그 초안 생성을 빠르게 시작하는 기본 팩입니다.</p>
+        </div>
+        <div class="badge">운영중</div>
+      </article>
+      <article class="card">
+        <div>
+          <span>Business</span>
+          <h3>상담 전환 팩</h3>
+          <p>상담 접수부터 제안서 초안까지 연결하는 실무형 응대 템플릿입니다.</p>
+        </div>
+        <div class="badge">운영중</div>
+      </article>
+      <article class="card">
+        <div>
+          <span>Studio</span>
+          <h3>이미지 제작 팩</h3>
+          <p>부동산, 제품컷, 썸네일 제작에 활용할 수 있는 이미지 프롬프트 묶음입니다.</p>
+        </div>
+        <div class="badge">준비중</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
