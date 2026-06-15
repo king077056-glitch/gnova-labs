@@ -19,3 +19,20 @@
 ### Local-Only Notes
 - Record any files intentionally left local.
 - If needed, point to `docs/LOCAL_ONLY_EXCLUSIONS_TRACKER.md`.
+
+---
+
+## 2026-06-15
+
+### Summary
+- Investigated recent static-site changes for high-severity regressions.
+- Fixed the `템플릿 판매` header button so it no longer navigates to missing `gnova_sales_suite.html`; it now opens an in-app template sales category.
+- Added `tests/test_static_site_links.py` to catch missing same-site static targets in HTML attributes and JavaScript navigation.
+
+### Validation
+- `python3 tests/test_static_site_links.py`
+- `node --check /tmp/gnova_inline_script.js`
+
+### Safe Push Notes
+- Safe code/test changes were committed and pushed to `cursor/critical-bug-investigation-881b`.
+- No secrets, logs, runtime state, or local-only operational artifacts were staged.
